@@ -10,8 +10,10 @@
 	<context:component-scan base-package="com.pearl.controller" />
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-		<property name="prefix" value="/WEB-INF/views/jsp/"></property>
+		<property name="prefix" value="/WEB-INF/resources/jsp/"></property>
 		<property name="suffix" value=".jsp"></property>
 	</bean>
+	
+	<mvc:resources location="/WEB-INF/resources/css/" mapping="/WEB-INF/resources/css/**"></mvc:resources>
 
 </beans>

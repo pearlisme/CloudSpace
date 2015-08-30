@@ -1,14 +1,20 @@
 package com.pearl.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HomeController {
-	@RequestMapping("/home")
+	/*@Autowired*/
+	public HomeController() {
+		// TODO Auto-generated constructor stub
+	}
+	@RequestMapping("/")
 	/*@ResponseBody*/
-	public String goHome() {
+	public String goHome(Model model) {
+		model.addAttribute("msg","copyrighted by pearl Inc");
 		return "login";
 	}
 
